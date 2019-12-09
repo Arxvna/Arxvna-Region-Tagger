@@ -1,0 +1,36 @@
+{
+
+  "manifest_version": 2,
+  "name": "ART",
+  "version": "1.0",
+
+  "description": "Introduces a set of shortcuts to make tagging regions post-raid easier",
+
+  "icons": {
+    "48": "icons/spray.svg",
+    "96": "icons/spray.svg"
+  },
+
+  "permissions": [
+  	"activeTab",
+    "storage"
+  ],
+
+  "content_scripts": [
+    {
+      "matches": ["https://www.nationstates.net/page=region_control*", "https://www.nationstates.net/page=region_admin/*", "https://www.nationstates.net/region*"],
+      "js": ["jquery-3.4.1.min.js", "keyShortcuts.js"]
+    }
+  ],
+
+  "options_ui": {
+    "page": "options.html"
+  },
+
+  "applications": {
+    "gecko": {
+      "id": "arxvna@gmail.com"
+    }
+  }
+
+}
